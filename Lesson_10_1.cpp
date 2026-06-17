@@ -13,11 +13,10 @@ int main(){
 	
 	int* arr = new int [size_arr]();
 	
-	for(int i,j = 0; i < size_arr;){
+	for(int i = 0; i < size_arr;){
 	std::cout<< "arr [" << i << "] = ";	
-	std::cin>> arr[j];
+	std::cin>> arr[i];
 	i++;
-	j++;
 	}
 
 	std::cout<< "Введённый массив: ";
