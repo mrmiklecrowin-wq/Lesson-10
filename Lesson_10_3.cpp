@@ -3,30 +3,30 @@
 
 
 int** create_two_dim_array(int &rows,int &columns){	
-	int** arr_int = new int*[rows];
+	int** arr = new int*[rows];
 	for(int i = 0;i < rows;i++){
-	arr_int[i] = new int[columns];} 
-	return arr_int;
+	arr[i] = new int[columns];} 
+	return arr;
 }
 
-void fill_two_dim_array(int** array, int rows, int cols) {
+void fill_two_dim_array(int** arr, int rows, int cols) {
 	for (int i = 0; i < rows; i++) {
 	for (int j = 0; j < cols; j++){
-	array[i][j] = (i + 1) * (j + 1);}}
+	arr[i][j] = (i + 1) * (j + 1);}}
 }
 
-void print_two_dim_array(int** array, int rows, int cols) {
+void print_two_dim_array(int** arr, int rows, int cols) {
 	std::cout<< "Таблица умножения:" << std::endl;
 	for (int i = 0; i < rows; ++i) {
 	for (int j = 0; j < cols; ++j) {
-	std::cout << array[i][j] << "\t";}
+	std::cout << arr[i][j] << "\t";}
 	std::cout << std::endl;}
 }
 
-void delete_two_dim_array(int** array, int rows, int cols) {
+void delete_two_dim_array(int** arr, int rows, int cols) {
 	for (int i = 0; i < rows; ++i) {
-	delete[] array[i];}
-	delete[] array;
+	delete[] arr[i];}
+	delete[] arr;
 }
 
 
