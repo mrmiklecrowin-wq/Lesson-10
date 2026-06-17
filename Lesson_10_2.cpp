@@ -1,15 +1,10 @@
 #include<iostream>
 #include<windows.h>
 
-double create_array(int &size_arr){	
+double* create_array(int &size_arr){	
 	double* arr = new double[size_arr]();
-	for(int i = 0;i < size_arr; i++){
-	std::cout<<(double)arr[i]<< " ";	
-	}
-	delete[]arr;
-	return *arr;
+	return arr;
 }
-
 
 int main(){
 	SetConsoleCP(1251);
@@ -19,9 +14,17 @@ int main(){
 
 	std::cout<<"Введите размер массива: ";
 	std::cin>>size_arr;
-	
-	std::cout<<"Массив: ";
-	create_array(size_arr);
 
+	create_array(size_arr);
+	double* ptr = create_array(size_arr);
+
+	std::cout<<"Массив: ";
+	
+	for(int i = 0;i < size_arr;i++){
+	std::cout<<ptr[i]<<" ";
+	}
+	
+	delete[] ptr;
+	
 return 0;	
 }
